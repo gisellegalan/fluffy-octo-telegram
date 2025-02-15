@@ -6,6 +6,7 @@ function submitFeedback() {
     const designation = document.getElementById('designation').value;
     const productType = document.getElementById('productType').value;
     const feedback = document.getElementById('feedbackText').value;
+    const experience = document.getElementById('experienceText').value;
 
     alert('Thank you for your valuable feedback')
 
@@ -16,12 +17,13 @@ function submitFeedback() {
     document.getElementById('userDesignation').innerHTML = designation;
     document.getElementById('userProductChoice').innerHTML = productType;
     document.getElementById('userFeedback').innerHTML = feedback;
+    document.getElementById('userExperience').innerHTML = experience;
 
     document.getElementById('userInfo').style.display = 'block';
 }
 
 const submitButton = document.getElementById('submitBtn');
-submitButton.onclick = submitFeedback();
+submitButton.onclick = submitFeedback; // No parantheses: Reference to the function, not a function call
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
